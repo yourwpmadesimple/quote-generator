@@ -17,3 +17,11 @@ function newQuote() {
     console.log(quote)
 }
 ```
+#### Getting data from local file
+```
+function myLocalQuotes() {
+  const quote = loadQuotes[Math.floor(Math.random() * loadQuotes.length)];
+  console.log(quote);
+}
+myLocalQuotes();
+```
