@@ -21,7 +21,7 @@ body{
     max-width: 900px;
     padding:20px 30px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .quote-text{
@@ -58,8 +58,18 @@ button{
     box-shadow:0 0.3rem rgba(121, 121, 121, 0.65) ;
 }
 button:hover{
-    -webkit-filter: brightness(200%);
-            filter: brightness(200%)
+    -webkit-filter: brightness(125%);
+            filter: brightness(125%)
+}
+button:active{
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+.twitter-button:hover{
+    color:#38a1f3;
+}
+.fa-twitter{
+    font-size: 1.5rem;
 }
 
 /* Mdeia Query: Tablet or Smaller*/
