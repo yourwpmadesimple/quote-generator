@@ -1,7 +1,7 @@
 // Get Quotss From API
 // Asynchronous fetch request in try catch
 
-let apiQuotes = [];
+//let apiQuotes = [];
 
 // Show New Quote
 function newQuote() {
@@ -9,6 +9,12 @@ function newQuote() {
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   console.log(quote);
 }
+
+function myLocalQuotes() {
+  const quote = loadQuotes[Math.floor(Math.random() * loadQuotes.length)];
+  console.log(quote);
+}
+myLocalQuotes();
 
 async function getQuotes() {
   const apiUrl = "https://type.fit/api/quotes";
@@ -23,4 +29,4 @@ async function getQuotes() {
   }
 }
 // On Page Load
-getQuotes();
+//getQuotes();
