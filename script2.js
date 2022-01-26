@@ -1,9 +1,3 @@
-# Quote Generator
-
-## Using Cors 
-
-### Cors with fetch URL
-```javascript
 // Get Quote From API
 async function getQuote() {
   const proxyURL = "https://cors-anywhere.herokuapp.com/";
@@ -21,4 +15,3 @@ async function getQuote() {
 
 // On Load
 getQuote();
-```
