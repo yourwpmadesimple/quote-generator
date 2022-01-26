@@ -111,3 +111,41 @@ function tweetQuote() {
 twitterBtn.addEventListener("click", tweetQuote, false);
 newQuoteBtn.addEventListener("click", newQuote, true);
 ```
+
+### Added Loader
+```javascript
+// Show Loading
+function loading() {
+  loader.hidden = false;
+  quoteContainer.hidden = true;
+}
+
+// Hide Loading
+function complete() {
+  quoteContainer.hidden = false;
+  loader.hidden = true;
+}
+
+// Show New Quote
+function newQuote() {
+  loading();
+  // Pick a random quote form the apiQuotes array
+  const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+  console.log(quote);
+  // Check if Author field is blank and replace it with 'Unknown'
+  if (!quote.author) {
+    authorText.textContent = `~ Unknown`;
+  } else {
+    authorText.textContent = `~ ${quote.author}`; // Insert author text into DOM id=author
+  }
+  // Check if Quote text is more than 50 characters, then apply appropriate styling
+  if (quote.text.length > 50) {
+    quoteText.classList.add("long-quote");
+  } else {
+    quoteText.classList.remove("long-quote");
+  }
+  // Set Quote, Hide Loader
+  quoteText.textContent = quote.text; // Insert quote text into DOM id=quote
+  complete();
+}
+```
